@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.489
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeverityValidator", "SeverityValidator\SeverityValidator.csproj", "{E04EE4A5-9FB5-4F7D-8221-39E3161125CB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeverityValidator", "src\SeverityValidator\SeverityValidator.csproj", "{E04EE4A5-9FB5-4F7D-8221-39E3161125CB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeverityValidator.Tests", "SeverityValidator.Tests\SeverityValidator.Tests.csproj", "{6F230D3B-3AF1-4EA7-A41B-F5282087AE20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeverityValidator.Tests", "tests\SeverityValidator.Tests\SeverityValidator.Tests.csproj", "{6F230D3B-3AF1-4EA7-A41B-F5282087AE20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1CC05971-F1E0-4EA2-9B06-6D3E6603C459}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B2CE6F2A-37DA-42A0-8546-3B6F083930ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,5 +31,9 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF3E7463-3BC7-4703-B459-9D016F715FF0}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E04EE4A5-9FB5-4F7D-8221-39E3161125CB} = {1CC05971-F1E0-4EA2-9B06-6D3E6603C459}
+		{6F230D3B-3AF1-4EA7-A41B-F5282087AE20} = {B2CE6F2A-37DA-42A0-8546-3B6F083930ED}
 	EndGlobalSection
 EndGlobal

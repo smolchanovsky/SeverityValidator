@@ -5,8 +5,17 @@ using FluentValidation.Results;
 
 namespace SeverityValidator.Extensions
 {
-	public static class ValidationResultExtensions
+	public static class ValidationResultFilterExtensions
 	{
+		public static bool HasNoErrors(this ValidationResult validationResult) =>
+			!validationResult.Errors.WithSeverityError().Any();
+
+		public static bool HasNoWarnings(this ValidationResult validationResult) =>
+			!validationResult.Errors.WithSeverityWarning().Any();
+
+		public static bool HasNoInfos(this ValidationResult validationResult) =>
+			!validationResult.Errors.WithSeverityInfo().Any();
+
 		public static ValidationFailure[] WithSeverityError(this IEnumerable<ValidationFailure> errors) =>
 			errors.GetErrorsBySeverity(Severity.Error);
 

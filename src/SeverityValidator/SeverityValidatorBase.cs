@@ -31,7 +31,7 @@ namespace SeverityValidator
 		}
 
 		public ValidationResult Validate(T instance) =>
-			lazyFluentValidator.Value.Validate(instance);
+			lazyFluentValidator.Value.Validate(instance, ruleSet: "*");
 
 		public ValidationResult ValidateErrors(T instance) => 
 			lazyFluentValidator.Value.Validate(instance, ruleSet: Severity.Error.ToString());

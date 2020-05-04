@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SeverityValidator\SeverityValidator.csproj" />
+    <ProjectReference Include="..\..\src\SeverityValidator\SeverityValidator.csproj" />
   </ItemGroup>
 
 </Project>

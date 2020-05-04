@@ -294,20 +294,20 @@ namespace SeverityValidator.Tests
 
 			protected override void RulesForErrors(IFluentValidator<TestEntity> fluentValidator)
 			{
-				fluentValidator.ErrorRuleFor(x => x.Id).Cascade(CascadeMode.Continue).NotNull();
-				fluentValidator.ErrorRuleFor(x => x.Name).Cascade(CascadeMode.Continue).NotNull();
+				fluentValidator.RuleFor(x => x.Id).NotNull();
+				fluentValidator.RuleFor(x => x.Name).NotNull();
 			}
 
 			protected override void RulesForWarnings(IFluentValidator<TestEntity> fluentValidator)
 			{
-				fluentValidator.WarningRuleFor(x => x.Description).NotNull();
-				fluentValidator.WarningRuleFor(x => x.FullDescription).NotNull();
+				fluentValidator.RuleFor(x => x.Description).NotNull();
+				fluentValidator.RuleFor(x => x.FullDescription).NotNull();
 			}
 
 			protected override void RulesForInfo(IFluentValidator<TestEntity> fluentValidator)
 			{
-				fluentValidator.InfoRuleFor(x => x.OptionField1).NotNull();
-				fluentValidator.InfoRuleFor(x => x.OptionField2).NotNull();
+				fluentValidator.RuleFor(x => x.OptionField1).NotNull();
+				fluentValidator.RuleFor(x => x.OptionField2).NotNull();
 			}
 		}
 
